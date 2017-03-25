@@ -1,0 +1,29 @@
+{
+  "name": "loki-fs-cipher-adapter",
+  "version": "1.0.0",
+  "description": "File System Adapter for LokiJS with data encryption",
+  "main": "dist/index.js",
+  "scripts": {
+	"gulp":"gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lokijs",
+    "cordova",
+    "cipher"
+  ],
+  "author": "Naveen Kumar",
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "crypto-js": "3.1.9-1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.1.2"
+  }
+}
