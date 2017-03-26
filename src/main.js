@@ -83,12 +83,16 @@
 						} else {
 							// Decrypt the database by using the provided key
 							var bytes = CryptoJS.AES.decrypt(contents, that.options.password)
-							if (bytes.sigBytes < 0) {
+							try {
+								if (bytes.sigBytes < 0) {
+									callback(new Error("Wrong Password for Database!"));
+								} else {
+									contents = bytes.toString(CryptoJS.enc.Utf8);
+									callback(contents);
+									console.log("Database Loaded Successfully from file!");
+								}
+							} catch(error) {
 								callback(new Error("Wrong Password for Database!"));
-							} else {
-								contents = bytes.toString(CryptoJS.enc.Utf8);
-								callback(contents);
-								console.log("Database Loaded Successfully from file!");
 							}
 						}
 					};

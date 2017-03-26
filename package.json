@@ -1,6 +1,6 @@
 {
   "name": "loki-fs-cipher-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "File System Adapter for LokiJS with data encryption",
   "main": "dist/index.js",
   "scripts": {
